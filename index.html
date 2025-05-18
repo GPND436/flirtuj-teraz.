@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flirtuj Teraz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe0e9, #ffc2d1);
+      color: #333;
+    }
 
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      padding-top: 100%;
+      background-color: #f9d8dc;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-placeholder::after {
+      content: 'Zdjęcie';
+      color: #888;
+      font-size: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .opinions {
+      background-color: #fff0f4;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .opinions h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .opinion {
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      background-color: #ff5c8a;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background-color: #ff3366;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flirtuj Teraz</h1>
+    <p>Nowe spojrzenie na randki online. Zobacz, kto czeka na Ciebie! 💕</p>
+  </header>
+
+  <section class="photos">
+    <div class="photo-placeholder"></div>
+    <div class="photo-placeholder"></div>
+    <div class="photo-placeholder"></div>
+    <div class="photo-placeholder"></div>
+  </section>
+
+  <section class="opinions">
+    <h2>Co mówią użytkownicy?</h2>
+    <p class="opinion">"Najlepsza aplikacja randkowa, z jakiej korzystałam!" – Anna</p>
+    <p class="opinion">"Tu poznałem swoją drugą połówkę ❤" – Michał</p>
+  </section>
+
+  <section class="cta-section">
+    <h2>Gotowy na flirt?</h2>
+    <div class="cta-buttons">
+      <a href="https://app-eu1.hubspot.com/pages/146225170/editor/237535263964/content" class="cta-button">Zarejestruj się</a>
+      <a href="https://app-eu1.hubspot.com/pages/146225170/editor/237535263964/content" class="cta-button">Zaloguj się</a>
+    </div>
+  </section>
+</body>
+</html>
