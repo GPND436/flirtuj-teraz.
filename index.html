@@ -40,6 +40,11 @@
       padding: 40px 20px 20px;
     }
 
+    header img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
@@ -102,6 +107,14 @@
       margin-right: auto;
       line-height: 1.6;
     }
+
+    .opinion img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
@@ -112,7 +125,7 @@
 
   <header>
     <div style="display: flex; flex-direction: column; align-items: center;">
-      <img src="logo.png" alt="Logo Flirtuj Teraz" style="max-width: 100px; margin-bottom: 10px;" />
+      <img src="logo.png" alt="Logo Flirtuj Teraz" />
       <h1>Flirtuj Teraz</h1>
       <p>Nowe spojrzenie na randki online. Zobacz, kto czeka na Ciebie! 💕</p>
     </div>
@@ -132,8 +145,14 @@
 
   <section class="opinions">
     <h2>Co mówią użytkownicy?</h2>
-    <p class="opinion">"Na początku byłam sceptyczna, ale już po kilku dniach poznałam naprawdę fajnych ludzi. Teraz codziennie rozmawiam z kimś ciekawym. Super aplikacja!" – Anna</p>
+
+    <div style="max-width: 800px; margin: 0 auto 40px; text-align: center;">
+      <img src="anna.png" alt="Anna" />
+      <p class="opinion">"Na początku byłam sceptyczna, ale już po kilku dniach poznałam naprawdę fajnych ludzi. Teraz codziennie rozmawiam z kimś ciekawym. Super aplikacja!" – Anna</p>
+    </div>
+
     <p class="opinion">"Korzystałem z różnych aplikacji randkowych, ale dopiero tutaj poznałem osobę, z którą naprawdę się dogaduję. Jesteśmy razem od 6 miesięcy." – Michał</p>
+
     <p class="opinion">"Poleciła mi koleżanka i nie żałuję. Dużo realnych profili i intuicyjna obsługa. Czuć, że ktoś nad tym serwisem czuwa." – Katarzyna</p>
   </section>
 </body>
