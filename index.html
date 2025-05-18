@@ -13,9 +13,30 @@
       color: #333;
     }
 
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .top-bar a {
+      background-color: #ff5c8a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .top-bar a:hover {
+      background-color: #ff3366;
+    }
+
     header {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 40px 20px 20px;
     }
 
     header h1 {
@@ -25,6 +46,13 @@
 
     header p {
       font-size: 1.2rem;
+    }
+
+    .stats {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
     }
 
     .photos {
@@ -56,18 +84,22 @@
 
     .opinions {
       background-color: #fff0f4;
-      padding: 40px 20px;
+      padding: 60px 40px;
       text-align: center;
     }
 
     .opinions h2 {
       font-size: 2rem;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .opinion {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       font-style: italic;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
     }
 
     .cta-section {
@@ -106,10 +138,20 @@
   </style>
 </head>
 <body>
+  <div class="top-bar">
+    <a href="https://app-eu1.hubspot.com/pages/146225170/editor/237535263964/content">Zarejestruj się</a>
+    <a href="https://app-eu1.hubspot.com/pages/146225170/editor/237535263964/content">Zaloguj się</a>
+  </div>
+
   <header>
     <h1>Flirtuj Teraz</h1>
     <p>Nowe spojrzenie na randki online. Zobacz, kto czeka na Ciebie! 💕</p>
   </header>
+
+  <div class="stats">
+    <p>🎉 Już ponad <strong>2000 aktywnych użytkowników</strong>!</p>
+    <p>💑 <strong>70%</strong> z nich znalazło swoją drugą połówkę</p>
+  </div>
 
   <section class="photos">
     <div class="photo-placeholder"></div>
@@ -120,8 +162,9 @@
 
   <section class="opinions">
     <h2>Co mówią użytkownicy?</h2>
-    <p class="opinion">"Najlepsza aplikacja randkowa, z jakiej korzystałam!" – Anna</p>
-    <p class="opinion">"Tu poznałem swoją drugą połówkę ❤" – Michał</p>
+    <p class="opinion">"Na początku byłam sceptyczna, ale już po kilku dniach poznałam naprawdę fajnych ludzi. Teraz codziennie rozmawiam z kimś ciekawym. Super aplikacja!" – Anna</p>
+    <p class="opinion">"Korzystałem z różnych aplikacji randkowych, ale dopiero tutaj poznałem osobę, z którą naprawdę się dogaduję. Jesteśmy razem od 6 miesięcy." – Michał</p>
+    <p class="opinion">"Poleciła mi koleżanka i nie żałuję. Dużo realnych profili i intuicyjna obsługa. Czuć, że ktoś nad tym serwisem czuwa." – Katarzyna</p>
   </section>
 
   <section class="cta-section">
