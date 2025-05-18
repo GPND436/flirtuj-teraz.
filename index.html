@@ -1,159 +1,548 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flirtuj Teraz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Flirtuj Teraz - innowacyjna platforma randkowa. Poznaj nowych ludzi, znajdź miłość lub przyjaźń w przyjaznej atmosferze.">
+  <meta name="keywords" content="randki online, znajdź miłość, portal randkowy, flirt, singiele">
+  <title>Flirtuj Teraz - Nowoczesny portal randkowy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body {
+    :root {
+      --primary-color: #ff5c8a;
+      --primary-dark: #ff3366;
+      --secondary-color: #fff0f4;
+      --text-color: #333;
+      --light-text: #555;
+      --white: #ffffff;
+      --radius: 12px;
+    }
+    
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    
+    body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #ffe0e9, #ffc2d1);
-      color: #333;
+      color: var(--text-color);
+      line-height: 1.6;
     }
-
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Top Bar */
     .top-bar {
       display: flex;
       justify-content: flex-end;
       gap: 15px;
       padding: 20px;
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
-    .top-bar a {
-      background-color: #ff5c8a;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 10px 25px;
+      border-radius: var(--radius);
       text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
     }
-
-    .top-bar a:hover {
-      background-color: #ff3366;
+    
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 92, 138, 0.3);
     }
-
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+    
+    .btn-outline:hover {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+    
+    /* Header */
     header {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 60px 20px 40px;
     }
-
-    header img {
-      max-width: 100px;
-      margin-bottom: 10px;
+    
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      object-fit: contain;
     }
-
-    header h1 {
-      font-size: 2.5rem;
+    
+    h1 {
+      font-size: 2.8rem;
       margin-bottom: 1rem;
+      color: var(--primary-dark);
     }
-
-    header p {
-      font-size: 1.2rem;
+    
+    .tagline {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
-
+    
+    .main-cta {
+      font-size: 1.1rem;
+      padding: 15px 40px;
+      margin-top: 20px;
+    }
+    
+    /* Stats */
     .stats {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 1rem;
-      color: #555;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+      flex-wrap: wrap;
     }
-
-    .photos {
+    
+    .stat-item {
+      background: var(--white);
+      padding: 15px 25px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .stat-icon {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+    }
+    
+    /* Features */
+    .features {
+      padding: 80px 0;
+      background: var(--white);
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: var(--primary-dark);
+    }
+    
+    .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      background: var(--secondary-color);
+      padding: 30px;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .feature-title {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+    
+    /* Users */
+    .users {
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .users-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      padding: 40px 20px;
-      text-align: center;
+      margin-top: 40px;
     }
-
-    .photo-placeholder {
-      width: 100%;
-      padding-top: 100%;
-      background-color: #f9d8dc;
-      border-radius: 12px;
+    
+    .user-card {
       position: relative;
+      border-radius: var(--radius);
       overflow: hidden;
+      height: 250px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-
-    .photo-placeholder::after {
-      content: 'Zdjęcie';
-      color: #888;
-      font-size: 1rem;
+    
+    .user-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .user-card:hover .user-img {
+      transform: scale(1.1);
+    }
+    
+    .user-info {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: var(--white);
+      padding: 20px 15px;
+      text-align: left;
     }
-
-    .opinions {
-      background-color: #fff0f4;
-      padding: 60px 40px;
-      text-align: center;
+    
+    .user-name {
+      font-weight: 600;
+      margin-bottom: 5px;
     }
-
-    .opinions h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
+    
+    .user-age {
+      font-size: 0.9rem;
+      opacity: 0.9;
     }
-
-    .opinion {
-      margin-bottom: 40px;
-      font-style: italic;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+    
+    /* Testimonials */
+    .testimonials {
+      background: var(--secondary-color);
+      padding: 80px 0;
     }
-
-    .opinion img {
-      width: 80px;
-      height: 80px;
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .testimonial-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      font-size: 5rem;
+      color: var(--primary-color);
+      opacity: 0.1;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+    }
+    
+    .user-avatar {
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 10px;
+      margin-right: 20px;
+      border: 3px solid var(--primary-color);
+    }
+    
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .user-details h4 {
+      margin-bottom: 5px;
+    }
+    
+    .user-role {
+      color: var(--light-text);
+      font-size: 0.9rem;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: var(--white);
+    }
+    
+    .cta-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .cta-text {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--text-color);
+      color: var(--white);
+      padding: 50px 0 20px;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .social-links a {
+      color: var(--white);
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: var(--primary-color);
+    }
+    
+    .copyright {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .tagline {
+        font-size: 1.1rem;
+      }
+      
+      .stats {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Top Navigation -->
   <div class="top-bar">
-    <a href="https://app-eu1.hubspot.com/pages/146225170/editor/237535263964/content">Zarejestruj się</a>
-    <a href="https://app-eu1.hubspot.com/pages/146225170/editor/237535263964/content">Zaloguj się</a>
+    <a href="#register" class="btn btn-outline">Zarejestruj się</a>
+    <a href="#login" class="btn">Zaloguj się</a>
   </div>
 
+  <!-- Hero Section -->
   <header>
-    <div style="display: flex; flex-direction: column; align-items: center;">
-      <img src="logo.png" alt="Logo Flirtuj Teraz" />
+    <div class="container">
+      <img src="https://via.placeholder.com/120" alt="Logo Flirtuj Teraz - serwis randkowy" class="logo">
       <h1>Flirtuj Teraz</h1>
-      <p>Nowe spojrzenie na randki online. Zobacz, kto czeka na Ciebie! 💕</p>
+      <p class="tagline">Nowe spojrzenie na randki online. Łączymy ludzi na podstawie prawdziwych zainteresowań i wartości. Zobacz, kto czeka na Ciebie! 💕</p>
+      <a href="#register" class="btn main-cta">Dołącz za darmo</a>
     </div>
   </header>
 
-  <div class="stats">
-    <p>🎉 Już ponad <strong>2000 aktywnych użytkowników</strong>!</p>
-    <p>💑 <strong>70%</strong> z nich znalazło swoją drugą połówkę</p>
+  <!-- Stats Section -->
+  <div class="container">
+    <div class="stats">
+      <div class="stat-item">
+        <i class="fas fa-users stat-icon"></i>
+        <div>
+          <strong>2000+</strong> aktywnych użytkowników
+        </div>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-heart stat-icon"></i>
+        <div>
+          <strong>70%</strong> znalazło swoją drugą połówkę
+        </div>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-comments stat-icon"></i>
+        <div>
+          <strong>500+</strong> nowych rozmów dziennie
+        </div>
+      </div>
+    </div>
   </div>
 
-  <section class="photos">
-    <div class="photo-placeholder"></div>
-    <div class="photo-placeholder"></div>
-    <div class="photo-placeholder"></div>
-    <div class="photo-placeholder"></div>
-  </section>
-
-  <section class="opinions">
-    <h2>Co mówią użytkownicy?</h2>
-
-    <div style="max-width: 800px; margin: 0 auto 40px; text-align: center;">
-      <img src="anna.png" alt="Anna" />
-      <p class="opinion">"Na początku byłam sceptyczna, ale już po kilku dniach poznałam naprawdę fajnych ludzi. Teraz codziennie rozmawiam z kimś ciekawym. Super aplikacja!" – Anna</p>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Dlaczego warto wybrać Flirtuj Teraz?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-user-shield feature-icon"></i>
+          <h3 class="feature-title">Bezpieczeństwo</h3>
+          <p>Weryfikujemy profile, aby zapewnić Ci bezpieczne środowisko do poznawania nowych ludzi.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-heart feature-icon"></i>
+          <h3 class="feature-title">Dopasowanie</h3>
+          <p>Nasz inteligentny algorytm dopasuje Cię z osobami o podobnych zainteresowaniach.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt feature-icon"></i>
+          <h3 class="feature-title">Wygoda</h3>
+          <p>Korzystaj z aplikacji gdziekolwiek jesteś - dostępnej na wszystkie urządzenia.</p>
+        </div>
+      </div>
     </div>
-
-    <p class="opinion">"Korzystałem z różnych aplikacji randkowych, ale dopiero tutaj poznałem osobę, z którą naprawdę się dogaduję. Jesteśmy razem od 6 miesięcy." – Michał</p>
-
-    <p class="opinion">"Poleciła mi koleżanka i nie żałuję. Dużo realnych profili i intuicyjna obsługa. Czuć, że ktoś nad tym serwisem czuwa." – Katarzyna</p>
   </section>
+
+  <!-- Users Section -->
+  <section class="users">
+    <div class="container">
+      <h2 class="section-title">Poznaj naszych użytkowników</h2>
+      <p>Dołącz do społeczności zróżnicowanych, prawdziwych osób poszukujących znajomości</p>
+      <div class="users-grid">
+        <div class="user-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Kasia - użytkowniczka Flirtuj Teraz" class="user-img">
+          <div class="user-info">
+            <div class="user-name">Kasia</div>
+            <div class="user-age">28 lat</div>
+          </div>
+        </div>
+        <div class="user-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marek - użytkownik Flirtuj Teraz" class="user-img">
+          <div class="user-info">
+            <div class="user-name">Marek</div>
+            <div class="user-age">31 lat</div>
+          </div>
+        </div>
+        <div class="user-card">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ania - użytkowniczka Flirtuj Teraz" class="user-img">
+          <div class="user-info">
+            <div class="user-name">Ania</div>
+            <div class="user-age">25 lat</div>
+          </div>
+        </div>
+        <div class="user-card">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Tomek - użytkownik Flirtuj Teraz" class="user-img">
+          <div class="user-info">
+            <div class="user-name">Tomek</div>
+            <div class="user-age">29 lat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Opinie naszych użytkowników</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Anna Nowak" class="user-avatar">
+            <div class="user-details">
+              <h4>Anna Nowak</h4>
+              <div class="user-role">Użytkowniczka od 2022</div>
+            </div>
+          </div>
+          <p>"Na początku byłam sceptyczna, ale już po kilku dniach poznałam naprawdę fajnych ludzi. Teraz codziennie rozmawiam z kimś ciekawym. Super aplikacja! W przeciwieństwie do innych portali, tutaj ludzie są bardziej autentyczni."</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michał Kowalski" class="user-avatar">
+            <div class="user-details">
+              <h4>Michał Kowalski</h4>
+              <div class="user-role">Użytkownik od 2021</div>
+            </div>
+          </div>
+          <p>"Korzystałem z różnych aplikacji randkowych, ale dopiero tutaj poznałem osobę, z którą naprawdę się dogaduję. Jesteśmy razem od 6 miesięcy i planujemy wspólną przyszłość. Dzięki Flirtuj Teraz!"</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Katarzyna Wiśniewska" class="user-avatar">
+            <div class="user-details">
+              <h4>Katarzyna Wiśniewska</h4>
+              <div class="user-role">Użytkowniczka od 2023</div>
+            </div>
+          </div>
+          <p>"Poleciła mi koleżanka i nie żałuję. Dużo realnych profili i intuicyjna obsługa. Czuć, że ktoś nad tym serwisem czuwa. W końcu portal randkowy, który nie jest pełen fałszywych kont!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Gotowy na nowe znajomości?</h2>
+      <p class="cta-text">Dołącz do tysięcy zadowolonych użytkowników i rozpocznij swoją przygodę z randkowaniem online już dziś. Rejestracja zajmuje mniej niż minutę!</p>
+      <a href="#register" class="btn main-cta" style="background: var(--white); color: var(--primary-color);">Załóż darmowe konto</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <img src="https://via.placeholder.com/100x50" alt="Flirtuj Teraz logo" style="margin-bottom: 30px;">
+      <div class="footer-links">
+        <a href="#about">O nas</a>
+        <a href="#how-it-works">Jak to działa?</a>
+        <a href="#safety">Bezpieczeństwo</a>
+        <a href="#pricing">Cennik</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="social-links">
+        <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#tiktok"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="copyright">© 2023 Flirtuj Teraz. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
 </body>
 </html>
